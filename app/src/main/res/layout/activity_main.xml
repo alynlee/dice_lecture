@@ -1,22 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout>
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#81c147"
+        android:orientation="vertical"
         tools:context=".MainActivity">
 
-        <Button
-            android:id="@+id/testBtnId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_margin="20dp"
+                android:text="인생은 주사위 한방에 가는거 아니겠습니까?">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:weightSum="2">
+
+            <ImageView
+                android:src="@drawable/dice_1"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_weight="1">
+            </ImageView>
+
+            <ImageView
+                android:src="@drawable/dice_2"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_weight="1">
+            </ImageView>
+
+        </LinearLayout>
+
+        <Button
+            android:text="인생고고"
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:layout_height="50dp"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:layout_margin="50dp">
+        </Button>
+    </LinearLayout>
 </layout>
